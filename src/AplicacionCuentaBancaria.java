@@ -8,12 +8,20 @@ import java.util.Scanner;
  * and open the template in the editor.
  */
 /**
- * 
+ * Esta clase se encarga de recoger datos del usuario y llamar al metodo
+ * correspondiente de nuestro objeto CuentaBancaria
  * @author cobos
  */
 public class AplicacionCuentaBancaria {
 
 
+    /**
+     * Este es el único metodo de esta clase, el cual se ejecuta siempre que
+     * iniciemos nuestra aplicación al tratarse del main, esta se encarga de
+     * imprimir el menú y de recoger los datos introducidos por el usuario
+     * para poder realizar la acción correspondiente a cada elección.
+     * @param args 
+     */
     public static void main(String[] args){
 
         CuentaBancariaCliente c = null;

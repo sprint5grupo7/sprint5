@@ -13,6 +13,15 @@ public class CuentaBancaria {
     public static final int MAXIMO = 100;
     public static final int MINIMO = 10;
 
+    /**
+ * Medienta el numero de entidad, de oficina y de numero de cuenta se 
+ * encarga de calcular los digitos de control pertenecientes a estos mediante 
+ * un algoritmo dado
+ * @param entidad String
+ * @param oficina String
+ * @param numCuenta String
+ * @return String con los dos digitos de control
+ */
     public static String obtenerDigitosControl(String entidad, String oficina, String numCuenta) {
         //Calcula los dos digitos de control
         String control = new String();
@@ -64,6 +73,12 @@ public class CuentaBancaria {
         return control;
     }
 
+    /**
+ * Comprueba si un numero completo es comprobando si sus digitos de control
+ * coinciden con los calculados mediante el metodo anterior
+ * @param CCC String que contiene todos los campos del numero
+ * @return boolean indicando si es correcto o no
+ */
     public static boolean comprobarCCC(String CCC) {
         boolean comprobacion = false;
         String entidad = new String(); //divido en partes el CCC
@@ -200,6 +215,11 @@ public class CuentaBancaria {
         return control;
     }
 
+    /**
+     * Cambia el saldo de un cuenta al que le pase por parametro
+     * @param saldo String 
+     * @throws Exception Exception La lanza si el saldo no es correcto
+     */
     public void cambiar_Saldo(String saldo) throws Exception {
         if (comprobarSaldo(saldo)) {
             //antes comprueba que el saldo no sea negativo
@@ -210,6 +230,11 @@ public class CuentaBancaria {
         }
     }
 
+    /**
+     * Cambia el titular de un cuenta al que le pase por parametro
+     * @param titular String con una longitud entre el maximo y minimo
+     * @throws Exception La lanza si la longitud no es la correcta
+     */
     public void cambiar_titular(String titular) throws Exception {
         if (titular.length() > MINIMO && titular.length() < MAXIMO) {
             //comprueba que el nombre cumpla las reglas
@@ -220,6 +245,12 @@ public class CuentaBancaria {
         }
     }
 
+    /**
+     * Se encarga de comprobar que el saldo no sea negativo
+     * @param saldo String que combierta a double para la comprobación
+     * @return
+     * @throws Exception La lanza si el saldo no es correcto
+     */
     public boolean comprobarSaldo(String saldo) throws Exception {
         double sald = Double.parseDouble(saldo);
         boolean comprobacion = true;
@@ -231,6 +262,11 @@ public class CuentaBancaria {
         }
     }
 
+    /**
+     * Incrementa el saldo de una cueta la cantidad que le indiquemos
+     * @param cantidad double, saldo a incrementar
+     * @throws Exception La lanza si el saldo es negativo
+     */
     public void ingresarDinero(double cantidad) throws Exception {
         double actual = Double.parseDouble(saldo);
         if (cantidad > 0) {
@@ -244,6 +280,11 @@ public class CuentaBancaria {
         this.saldo = nueva;
     }
 
+    /**
+     * Dismuniye el saldo de una cueta la cantidad que le indiquemos
+     * @param cantidad double, saldo a disminuir
+     * @throws Exception La lanza si el saldo es negativo o superior al actual
+     */
     public void retirar(double cantidad) throws Exception {
         double actual = Double.parseDouble(saldo);
         if ((cantidad < actual) && (cantidad > 0)) {
