@@ -91,7 +91,7 @@ private String control;
 public static final int MAXIMO = 100;
 public static final int MINIMO = 10;
 
-    public CuentaBancariaCliente(String titular, String entidad, String oficina, String DC,String numCuenta) throws Exception{
+    public CuentaBancariaCliente(String titular, String entidad, String oficina, String DC, String numCuenta, boolean ejemplo) throws Exception{
         cambiar_titular(titular);//llama al metodo para evitar errores
         String hola = obtenerDigitosControl(entidad, oficina, numCuenta);
         if((hola.charAt(0)==DC.charAt(0))&&(hola.charAt(1)==DC.charAt(1))){//comprueba que los DC sean correctos

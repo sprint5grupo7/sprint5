@@ -19,7 +19,7 @@ public class AplicacionCuentaBancaria {
         CuentaBancariaCliente c = null;
 
         try {
-            c = new CuentaBancariaCliente("manuel manuel manuel", "1234", "5678", "06", "1234567890");
+            c = new CuentaBancariaCliente("manuel manuel manuel", "1234", "5678", "06", "1234567890", null);
             c.cambiar_Saldo("1000");
         } catch (Exception ex) {
             ex.printStackTrace();
