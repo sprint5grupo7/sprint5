@@ -16,10 +16,10 @@ public class AplicacionCuentaBancaria {
 
     public static void main(String[] args){
 
-        CuentaBancaria c = null;
+        CuentaBancariaCliente c = null;
 
         try {
-            c = new CuentaBancaria("manuel manuel manuel", "1234", "5678", "06", "1234567890");
+            c = new CuentaBancariaCliente("manuel manuel manuel", "1234", "5678", "06", "1234567890");
             c.cambiar_Saldo("1000");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -98,7 +98,7 @@ public class AplicacionCuentaBancaria {
                     } while (cantidad < 0 && !numero);
 
                     try {
-                        c.ingresar(cantidad);
+                        c.ingresarDinero(cantidad);
                     } catch (IllegalArgumentException exe) {
 
                     }
