@@ -9,6 +9,76 @@
  * @author cobos
  */
 public class CuentaBancariaCliente {
+
+    /**
+     * @return the cliente
+     */
+    public String getCliente() {
+        return cliente;
+    }
+
+    /**
+     * @param cliente the cliente to set
+     */
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    /**
+     * @return the saldo
+     */
+    public String getSaldo() {
+        return saldo;
+    }
+
+    /**
+     * @param saldo the saldo to set
+     */
+    public void setSaldo(String saldo) {
+        this.saldo = saldo;
+    }
+
+    /**
+     * @return the entidad
+     */
+    public String getEntidad() {
+        return entidad;
+    }
+
+    /**
+     * @param entidad the entidad to set
+     */
+    public void setEntidad(String entidad) {
+        this.entidad = entidad;
+    }
+
+    /**
+     * @return the oficina
+     */
+    public String getOficina() {
+        return oficina;
+    }
+
+    /**
+     * @param oficina the oficina to set
+     */
+    public void setOficina(String oficina) {
+        this.oficina = oficina;
+    }
+
+    /**
+     * @return the numCuenta
+     */
+    public String getNumCuenta() {
+        return numCuenta;
+    }
+
+    /**
+     * @param numCuenta the numCuenta to set
+     */
+    public void setNumCuenta(String numCuenta) {
+        this.numCuenta = numCuenta;
+    }
     
 private String cliente;
 private String saldo;
